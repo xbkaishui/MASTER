@@ -3,6 +3,8 @@ import pickle
 
 universe = 'csi800' # or 'csi800'
 
+universe = 'csi300'
+
 # Please install qlib first before load the data.
 with open(f'data/{universe}/{universe}_dl_train.pkl', 'rb') as f:
     dl_train = pickle.load(f)

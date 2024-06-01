@@ -1,0 +1,5 @@
+data/csi300/
+data/csi800/
+__pycache__/
+nohup.out
+model_bak/
