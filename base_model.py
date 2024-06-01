@@ -6,6 +6,7 @@ from torch.utils.data import DataLoader
 from torch.utils.data import Sampler
 import torch
 import torch.optim as optim
+from loguru import logger
 
 def calc_ic(pred, label):
     df = pd.DataFrame({'pred':pred, 'label':label})
@@ -125,6 +126,7 @@ class SequenceModel():
         self.fitted = True
         best_param = None
         for step in range(self.n_epochs):
+            logger.info("run epoch {}", step)
             train_loss = self.train_epoch(train_loader)
             val_loss = self.test_epoch(valid_loader)
 
